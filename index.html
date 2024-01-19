@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div class="left">
+            <div class="text">Имя</div>
+            <div class="text">Дата рождения</div>
+            <div class="text">Пол</div>
+            <div class="text">Знак зодиака</div>
+            <div class="text">Питомец</div>
+            <div class="text">Хобби</div>
+        </div>
+        <div class ="center">
+            <div class="photo">
+                <input type="file" id="file-input" accept="image/*">
+                <label for="file-input">
+                    <img src="https://wiki.dave.eu/images/4/47/Placeholder.png" alt="Pic">
+                </label>
+            </div>
+        </div>
+        <div class="right">
+            <div class="inpFields">
+                <div class="answer"><input type="text" id="name" placeholder="Введите значение"></div>
+            </div>
+            <div class="inpFields">
+                <div class="answer"><input type="date" id="date"></div>
+            </div>
+            <div class="inpFields">
+                 <select name="sex" id="sex" >
+                    <option value="s0" disabled selected hidden>Выберите пол</option>
+                    <option value="s1">Мужской</option>
+                    <option value="s2">Женский</option>
+                </select>
+            </div>
+            <div class="inpFields">
+                <select name="zodiac" id="zodiacthekiller" >
+                    <option value="s0" disabled selected hidden>Выберите знак зодиака</option>
+                    <option value="s1">Овен</option>
+                    <option value="s2">Близнецы</option>
+                    <option value="s3">Рак</option>
+                    <option value="s4">Лев</option>
+                    <option value="s5">Дева</option>
+                    <option value="s6">Весы</option>
+                    <option value="s7">Скорпион</option>
+                    <option value="s8">Стрелец</option>
+                    <option value="s9">Козерог</option>
+                    <option value="s10">Водолей</option>
+                    <option value="s11">Рыбы</option>
+                </select>
+            </div>
+            <div class="inpFields">
+                <div class="answer"><input type="text" id="pet" placeholder="Введите значение"></div>
+            </div>
+            <div class="inpFields">
+                <div class="answer"><input type="text" id="hobby" placeholder="Введите значение"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="saveBtn" id="addButton" onclick="saveUserData()" >Save</div>
+        <div class="loadBtn"><select class="selectbox" id="userSelect"></select></div>
+        <div class="clearBtn" onclick="saveUserData()" id="clearButton">Clear</div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
